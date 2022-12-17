@@ -1,0 +1,548 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: monospace, Arial, sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #151515;
+    overflow-x:hidden;
+}
+
+.my-name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+}
+
+.main h1{
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    margin-right: -2rem;
+}
+.main h1:last-child{
+    color:#eeaa00;
+    text-align: right;
+}
+
+.lastLetter{
+    color: currentColor;
+    letter-spacing:normal;
+}
+
+.text-color{
+    color:#eeaa00;
+}
+
+/********************** 
+    PASKI NAWIGACJI 
+**********************/
+nav {
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 0px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    justify-content: space-between;
+}
+nav li{
+    margin: 10px 10px;
+    list-style: none;
+}
+nav a{
+    padding: 0px 10px;
+    border-bottom: 2px solid #fff;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .2s;
+}
+nav a:hover{
+    color: #eeaa00;
+    border-bottom: 10px solid #eeaa00;
+}
+
+.fixedNav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: auto;
+    font-size: 18px;
+    width: 100%;
+    top: -75px;
+    transition: .5s;
+}
+
+.fixedNav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(20, 20, 20, 0.9);
+    margin: auto;
+    width: 600px;
+    /* border-radius: 0px 0px 20px 20px; */
+    box-shadow: 0 -5px 15px 1px #000;
+    border-bottom: 2px solid #eeaa00;
+}
+
+.fixedNav li{
+    padding: 5px 10px;
+    list-style: none;
+}
+
+.fixedNav a{
+    padding: 0px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .2s;
+}
+
+.fixedNav a:hover{
+    color: #eeaa00;
+    border-bottom: 1px solid #eeaa00;
+}
+
+.fixedNav.active {
+    top: 0;
+}
+
+/********************** 
+    ABOUT ME SECTION
+**********************/
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.about-container{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.about-card{
+    padding: 30px;
+    width: 40%;
+}
+
+.about-card:first-child{
+    border-right: 2px solid #eeaa00;
+}
+
+.about h2{
+    color:#eeaa00;
+    font-size: 40px;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    padding: 0px 20px;
+    border-bottom: 2px solid #eeaa00;
+    margin: 15px auto;
+}
+
+.about p{
+    padding: 15px;
+    font-size: 25px;
+}
+
+.about ul{
+    list-style: none;
+    padding: 0px 15px;
+    font-size: 20px;
+}
+
+.about li{
+    padding: 5px 0px;
+    letter-spacing: .3rem;
+}
+
+/********************** 
+    PROJECTS SECTION
+**********************/
+
+.projects{
+    padding: 50px 30px;
+}
+
+.projects h2{
+    margin: 0px auto;
+    padding: 0px 20px;
+    width: fit-content;
+    font-size: 40px;
+    text-align: center;
+    color:#eeaa00;
+    border-bottom: 2px solid #eeaa00;
+    text-transform: uppercase;
+}
+
+.projects section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.projBox{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 30px;
+    border-radius: 30px;
+    background-color: #222;
+    box-shadow: 0 0px 15px .1px #000;
+    font-size: 0px;
+    transition: 0.3s;
+}
+
+.projBox:hover{
+    transform: scale(1.05);
+}
+
+.projBox img{
+    object-fit: cover;
+    height: 250px;
+    border-radius: 30px;
+}
+
+.projBox div{
+    font-size: 20px;
+}
+
+.projBox h3{
+    padding: 15px;
+    letter-spacing: 1rem;
+    margin-right: -1rem;
+    color: #eeaa00;
+    text-align: center;
+}
+
+.projBox p{
+    padding: 10px 20px;
+}
+
+.projBox a{
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #eeaa00;
+    border-bottom: 2px solid transparent;
+}
+
+.projBox a:hover{
+    border-bottom: 2px solid #eeaa00;
+}
+
+/********************** 
+    CONTACT SECTION
+**********************/
+
+.contact{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.contact h2{
+    color: #eeaa00;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    padding: 0px 30px 10px;
+    margin-bottom: 15px;
+    border-bottom: 5px solid #eeaa00;
+}
+
+.contact ul{
+    list-style: none;
+    text-align: center;
+}
+
+.contact li{
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 35px;
+    letter-spacing: .4rem;
+    margin-right: -.4rem;
+    transition: .4s;
+}
+
+.contact li:hover{
+    transform: scale(1.3);
+    color: #eeaa00;
+    cursor: pointer;
+}
+/* .contact li:first-child:hover{
+    transform: none;
+} */
+
+.contact p {
+    position: absolute;
+    bottom: 10px;
+}
+
+/********************** 
+     MEDIA QUERIES
+**********************/
+@media (width < 1660px ){
+    .about-card{
+        width: 45%;
+    }
+}
+
+
+@media (width < 1400px ){
+    .about{
+        padding: 50px 20px;
+    }
+    .about-card{
+        padding: 25px;
+        width: 50%;
+    }
+    .about p {
+        font-size: 22px;
+    }
+}
+
+@media (width < 1150px){
+    .about p{
+        padding: 10px;
+        font-size: 20px;
+    }
+    nav ul{
+        width: 55vw;
+    }
+}
+
+@media (width < 900px){
+    nav ul{
+        width: 65vw;
+    }
+
+    .fixedNav ul{
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .about-container{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about-card{
+        width: 80%;
+    }
+
+    .about-card:first-child{
+        border-right: none;
+    }
+}
+
+@media (width < 650px){
+    .main h1{
+        font-size: 90px;
+        letter-spacing: 1rem;
+        margin-right: -1rem;
+    }
+    nav ul{
+        width: 90vw;
+    }
+
+    .projects{
+        padding: 50px 20px;
+    }
+    
+    .projects h2{
+        padding: 0px 20px;
+        font-size: 40px;
+    }
+    
+    .projects section{
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+    
+    .projBox{
+        width: 80vw;
+        margin: 20px 0px;
+        border-radius: 20px;
+    }
+    
+    .projBox:hover{
+        transform: none;
+    }
+    
+    .projBox img{
+        border-radius: 20px;
+    }
+    
+    .projBox h3{
+        padding: 10px;
+    }
+}
+
+@media (width < 500px) {
+    .my-name{
+        top: 40%;
+    }
+    .main h1{
+        font-size: 70px;
+        letter-spacing: 1rem;
+        margin-right: -1rem;
+    }
+
+    nav {
+        bottom: 5vh;
+    }
+    nav ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li{
+        margin: 15px;
+    }
+    nav a{
+        font-size: 25px;
+        padding: 5px 0px;
+    }
+
+
+    .fixedNav {
+        font-size: 18px;
+        width: 100%;
+    }
+    .fixedNav ul{
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: 0 -5px 15px 1px #000;
+        overflow-x: hidden;
+    }
+    .fixedNav li{
+        padding: 5px 0px;
+    }
+    .fixedNav a{
+        padding: 5px 10px;
+    }
+
+
+    .about-card{
+        width: 100%;
+        padding: 25px 5px;
+    }
+
+    .projects{
+        padding: 50px 0px;
+    }
+    .projects h2{
+        padding: 0px 20px;
+        font-size: 35px;
+    }
+    .projBox{
+        width: 100vw;
+        border-radius: 0px;
+    }
+    .projBox img{
+        border-radius: 0px;
+    }
+    .projBox div{
+        font-size: 20px;
+    }
+    .projBox h3{
+        font-size: 22px;
+    }
+
+    .contact h2{
+        font-size: 40px;
+        letter-spacing: 1rem;
+        padding: 0px 20px 5px;
+        margin-bottom: 10px;
+        border-bottom: 4px solid #eeaa00;
+    }
+    .contact li{
+        margin: 5px 0px;
+        font-size: 28px;
+        letter-spacing: .3rem;
+        margin-right: -.3rem;
+    }
+    .contact li:hover{
+        transform: none;
+    }
+}
+
+@media (width < 360px){
+    .fixedNav {
+        font-size: 18px;
+        width: 100%;
+    }
+    .fixedNav ul{
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: 0 -5px 15px 1px #000;
+        overflow-x: hidden;
+    }
+    .fixedNav li{
+        padding: 5px 0px;
+    }
+    .fixedNav a{
+        padding: 5px 5px;
+        font-size: 16px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .my-name{
+        top: 40%;
+    }
+    .main h1{
+        font-size: 50px;
+        letter-spacing: 1rem;
+        margin-right: -1rem;
+    }
+
+    nav {
+        bottom: 5vh;
+        width: 80%;
+    }
+    nav ul{
+        width: 100%;
+        flex-direction: row;
+    }
+    nav li{
+        margin: 10px;
+    }
+    nav a{
+        font-size: 25px;
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.6.1.min.js"></script>
+        <link rel="icon" href="favicon.ico" sizes="any">
+        <title>Szymon Pięta</title>
+    </head>
+
+    <body>
+        <section data-section="start" class="box main">
+            <div class="my-name">
+                <h1>Szymon</h1>
+                <h1>Pięta</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a data="me" href="#">About me</a></li>
+                    <li><a data="proj" href="#">Projects</a></li>
+                    <li><a data="cont" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section data-section="me" class="box about">
+            <div class="about-container">
+                <div class="about-card">
+                    <h2>About Me</h2>
+                    <p>Hello, my name is Szymon. I program in C# and I'm also interested in web development and gamedev.</p>
+                </div>
+                <div class="about-card">
+                    <h2>My Skills</h2>
+                    <p>Technologies I’ve been working with:
+                        <ul>
+                            <li>C#</li>
+                            <li>Unity</li>
+                            <li>JavaScript</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section data-section="proj" class="box projects">
+            <h2>My Projects</h2>
+            <section>
+                <div class="projBox">
+                    <img src="img/game_banner.png">
+                    <div>
+                        <h3>NINJA GAME</h3>
+                        <p>My first game I made. I released it on itch.io. You can download game from that link:</p>
+                        <a href="https://szymon-pieta.itch.io/ninja-game">Project link</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section data-section="cont" class="box contact">
+            <h2>Contac<span class="lastLetter">t</span></h2>
+            <div>
+                <ul>
+                    <!-- <li>E-mail: email</li> -->
+                    <li><a href="https://github.com/szymon-pieta">GitHub</a></li>
+                    <li><a href="https://szymon-pieta.itch.io">Itch.io</a></li>
+                    <!-- <li><a href="#">YouTube</a></li> -->
+                </ul>
+            </div>
+            <p>&copy;2022 <span class="text-color">Szymon Pięta</span></p>
+        </section>
+
+        <div class="fixedNav">
+            <ul>
+                <li><a data="start" href="#">Start</a></li>
+                <li><a data="me" href="#">About me</a></li>
+                <li><a data="proj" href="#">Projects</a></li>
+                <li><a data="cont" href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <script>
+            $('nav a').on('click', function () {
+                const goToSection = "[data-section=" + $(this).attr('data') + "]";
+                $('body, html').animate({
+                    scrollTop: $(goToSection).offset().top
+                })
+            })
+
+            $('div.fixedNav a').on('click', function () {
+                const goToSection = "[data-section=" + $(this).attr('data') + "]";
+                $('body, html').animate({
+                    scrollTop: $(goToSection).offset().top
+                })
+            })
+
+            $(window).on("scroll", function () {
+                if ($(window).scrollTop() >= window.innerHeight) {
+                    $('div.fixedNav').addClass('active');
+                } else {
+                    $('div.fixedNav').removeClass('active');
+                }
+            })
+        </script>
+    </body>
+</html>
