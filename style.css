@@ -229,13 +229,12 @@ nav a:hover{
 }
 
 .projBox h3{
-    width: fit-content;
-    padding: 15px;
     letter-spacing: 1rem;
     margin-right: -1rem;
+    padding: 15px;
     color: #eeaa00;
     text-align: center;
-    margin: auto;
+    overflow-x: hidden;
 }
 
 .projBox p{
