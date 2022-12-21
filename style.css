@@ -234,7 +234,6 @@ nav a:hover{
     padding: 15px;
     color: #eeaa00;
     text-align: center;
-    overflow-x: hidden;
 }
 
 .projBox p{
@@ -475,6 +474,9 @@ nav a:hover{
     }
     .projBox h3{
         font-size: 22px;
+        letter-spacing: .8rem;
+        margin: auto;
+        width: fit-content;
     }
 
     .contact h2{
